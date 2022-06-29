@@ -1,161 +1,138 @@
+// Tham khảo: https://docs.expo.io/versions/latest/sdk/linear-gradient/
+
+import React, { Component } from 'react';
+import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import Header from './Header';
+import Block from './Block';
+import Footer from './Footer';
+
+import { AntDesign, FontAwesome5 } from '@expo/vector-icons';
 import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  Image,
-  Switch,
-} from 'react-native';
-import React from 'react';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
+  setStatusBarBackgroundColor,
+  setStatusBarStyle,
+  setStatusBarTranslucent,
+} from 'expo-status-bar';
 
-type Props = {};
-
-const Menu = (props: Props) => {
-  return (
-    <View style={styles.container}>
-      {/* HEADER */}
-
-      <View style={styles.headerContainer}>
-        <View style={styles.headerTop}></View>
-        <View style={styles.headerContentText}>
-          <Text style={styles.subHeaderContentText}>Classify transaction</Text>
-          <Text style={styles.subHeaderContentText2}>
-            Classify this transaction into a
-          </Text>
-          <Text style={styles.subHeaderContentText2}>particular category</Text>
-        </View>
-      </View>
-
-      {/* BODY */}
-      <View style={styles.bodyContainer}>
-        <View style={styles.Items}>
-          <View style={styles.bodyItem}>
-            <View style={styles.bodyIcon}>
-              <MaterialCommunityIcons
-                name="microsoft-windows"
-                size={24}
-                color="black"
-              />
-            </View>
-            <Text style={styles.subHeaderContentText2}>General</Text>
-          </View>
-          <View style={styles.bodyItem}>
-            <View style={styles.bodyIcon}>
-              <MaterialCommunityIcons
-                name="microsoft-windows"
-                size={24}
-                color="black"
-              />
-            </View>
-            <Text style={styles.subHeaderContentText2}>General</Text>
-          </View>
-        </View>
-      </View>
-
-      {/* FOOTER */}
-      <View style={styles.footerContainer}></View>
-    </View>
-  );
-};
-
-export default Menu;
+const ICON_SIZE = 26;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#1B1B2E',
   },
 
-  headerContainer: {
-    position: 'relative',
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-  },
-
-  headerTop: {
-    position: 'absolute',
-    marginLeft: -20,
-    marginTop: -80,
-    backgroundColor: '#ff4081',
-    width: '90%',
-    height: '150%',
-    borderRadius: 8,
-    transform: [{ rotateX: '0deg' }, { rotateZ: '-40deg' }],
-    borderBottomLeftRadius: 60,
-    borderBottomRightRadius: 60,
-    zIndex: 0,
-  },
-
-  headerContentText: {
-    position: 'absolute',
-    top: 60,
-    left: 0,
-  },
-
-  subHeaderContentText: {
-    color: '#FFFFFF',
-    fontSize: 24,
-    fontWeight: '700',
-    // lineHeight: 32,
-    marginBottom: 2,
-    marginVertical: 8,
-    marginHorizontal: 32,
-  },
-
-  subHeaderContentText2: {
-    color: '#FFFFFF',
-    fontSize: 15,
-    fontWeight: '300',
-
-    lineHeight: 14,
-    marginVertical: 8,
-    marginHorizontal: 32,
-    marginTop: 20,
-  },
-
-  bodyContainer: {
-    position: 'relative',
+  block: {
     flex: 2,
-    flexDirection: 'column',
-    backgroundColor: '#FFFFFF',
-    zIndex: 0,
+    justifyContent: 'flex-end',
   },
 
-  Items: {
-    position: 'absolute',
-    left: 0,
-    top: -80,
+  row: {
+    marginBottom: 24,
     flexDirection: 'row',
-    // width: '100%',
+    justifyContent: 'space-evenly',
   },
 
-  bodyItem: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#525C67',
-    width: 150,
-    height: 150,
-    borderRadius: 20,
-    margin: 20,
-  },
-
-  bodyIcon: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'blue',
-    width: 60,
-    height: 60,
-    borderRadius: 50,
-    marginBottom: 15,
-  },
-
-  footerContainer: {
-    backgroundColor: 'yellow',
-    justifyContent: 'center',
-    alignItems: 'center',
+  icon: {
+    color: '#ffffff',
   },
 });
+
+export default class Menu extends Component {
+  componentDidMount() {
+    setStatusBarStyle('light');
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <SafeAreaView flex={1}>
+          <Header />
+          <View style={styles.block}>
+            <View style={styles.row}>
+              <Block
+                color1="#81d4fa"
+                color2="#039be5"
+                text="General"
+                icon={
+                  <AntDesign
+                    name="appstore1"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+              <Block
+                color1="#b39ddb"
+                color2="#651fff"
+                text="Transport"
+                icon={
+                  <FontAwesome5
+                    name="bus"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+            </View>
+
+            <View style={styles.row}>
+              <Block
+                color1="#f48fb1"
+                color2="#ff4081"
+                text="Shopping"
+                icon={
+                  <FontAwesome5
+                    name="shopping-bag"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+              <Block
+                color1="#ffcc80"
+                color2="#ff6d00"
+                text="Bills"
+                icon={
+                  <FontAwesome5
+                    name="file-invoice"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+            </View>
+
+            <View style={styles.row}>
+              <Block
+                color1="#90caf9"
+                color2="#2962ff"
+                text="Entertainment"
+                icon={
+                  <FontAwesome5
+                    name="youtube"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+              <Block
+                color1="#a5d6a7"
+                color2="#00c853"
+                text="Grocery"
+                icon={
+                  <FontAwesome5
+                    name="shopping-basket"
+                    size={ICON_SIZE}
+                    style={styles.icon}
+                  />
+                }
+              />
+            </View>
+
+            <Footer />
+          </View>
+        </SafeAreaView>
+      </View>
+    );
+  }
+}
