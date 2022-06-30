@@ -1,18 +1,3 @@
-import { View, Text } from 'react-native';
-import React from 'react';
-
-type Props = {};
-
-const SectionListAdvancedExamples = (props: Props) => {
-  return (
-    <View>
-      <Text>SectionListAdvancedExamples </Text>
-    </View>
-  );
-};
-
-export default SectionListAdvancedExamples;
-
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, SectionList } from 'react-native';
 
@@ -44,22 +29,21 @@ const sections = [
 
 const extractKey = ({ id }) => id;
 
-export default class SectionListAdvancedExamples extends Component {
-  renderSectionHeader = ({ section }) => {
+function SectionListAdvancedExample() {
+  const renderSectionHeader = ({ section }) => {
     return <Text style={styles.header}>{section.title}</Text>;
   };
-
-  render() {
-    return (
-      <SectionList
-        style={styles.container}
-        sections={sections}
-        renderSectionHeader={this.renderSectionHeader}
-        keyExtractor={extractKey}
-      />
-    );
-  }
+  return (
+    <SectionList
+      style={styles.container}
+      sections={sections}
+      renderSectionHeader={renderSectionHeader}
+      keyExtractor={extractKey}
+    />
+  );
 }
+
+export default SectionListAdvancedExample;
 
 const styles = StyleSheet.create({
   container: {
@@ -69,7 +53,7 @@ const styles = StyleSheet.create({
   row: {
     padding: 15,
     marginBottom: 5,
-    backgroundColor: 'skyblue',
+    backgroundColor: 'yellow',
   },
   rowDark: {
     padding: 15,

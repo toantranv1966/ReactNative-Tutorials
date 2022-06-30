@@ -18,6 +18,8 @@ import FlatListExample from './Sessions5/FlatListExample';
 import ScrollViewExamples from './Sessions5/ScrollViewExample';
 import ScrollViewWithManyDataExample from './Sessions5/ScrollViewWithManyData';
 import MenuEdit from './Homeworks/Menu/MenuEdit';
+import SessionListExample from './Sessions5/SessionListExample';
+import SectionListAdvancedExamples from './Sessions5/SectionListAdvancedExamples ';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -28,14 +30,16 @@ export default function App() {
         fontSize={24}
         status="waiting"
       /> */}
+      {/* Session3 */}
       {/* <LikeButton /> */}
       {/* <RateButton /> */}
+      {/* Session4 */}
       {/* <Login /> */}
       {/* <Eatme /> */}
       {/* <GreenSignIn /> */}
       {/* <GreenSignup /> */}
       {/* <Menu /> */}
-      <MenuEdit />
+      {/* <MenuEdit /> */}
       {/* {visiable && <EffectExample />}
       <Button
         title="Hide component"
@@ -45,9 +49,12 @@ export default function App() {
       ></Button> */}
       {/* <NetworkingExample /> */}
       {/* <NetworkingWithAxios /> */}
+      {/* Session5 */}
       {/* <FlatListExample /> */}
       {/* <ScrollViewExamples /> */}
       {/* <ScrollViewWithManyDataExample /> */}
+      {/* <SessionListExample /> */}
+      <SectionListAdvancedExamples />
 
       <StatusBar style="auto" />
     </View>
