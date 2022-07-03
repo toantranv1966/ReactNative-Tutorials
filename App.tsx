@@ -4,12 +4,12 @@ import Login from './components/Login/Index';
 import Header from './components/Header';
 import LikeButton from './components/LikeButton';
 import RateButton from './RateButton';
-import Eatme from './Homeworks/Eatme/Login/Index';
+import Eatme from './Homeworks/Session04/Login/Index';
 import GreenSignIn from './Homeworks/Green/Green-SignIn';
 import GreenSignup from './Homeworks/Green/Green-Signup';
 // import Menu from './Homeworks/Menu';
-import Menu from './Homeworks/Menu/menu';
-import AlignContentLayout from './Homeworks/Menu/AlignContent1';
+import Menu from './Homeworks/Session04/Menu/menu';
+import AlignContentLayout from './Homeworks/Session04/Menu/AlignContent1';
 import EffectExample from './Sessions03/EffectExample';
 import React from 'react';
 import NetworkingExample from './Sessions04/NetworkingExample';
@@ -17,9 +17,15 @@ import NetworkingWithAxios from './Sessions04/NetworkingWithAxios';
 import FlatListExample from './Sessions5/FlatListExample';
 import ScrollViewExamples from './Sessions5/ScrollViewExample';
 import ScrollViewWithManyDataExample from './Sessions5/ScrollViewWithManyData';
-import MenuEdit from './Homeworks/Menu/MenuEdit';
+import MenuEdit from './Homeworks/Session04/Menu/MenuEdit';
 import SessionListExample from './Sessions5/SessionListExample';
 import SectionListAdvancedExamples from './Sessions5/SectionListAdvancedExamples ';
+import BasicFlexBox from './Sessions04/BasicFlexBox';
+import ImageExample from './Sessions04/ImageExample';
+import SvgExample from './Sessions04/SvgExample';
+import SignInScreen from './Homeworks/Session06/SignInScreen';
+import HomeScreen from './Homeworks/Session06/HomeScreen';
+import AppNavigator from './Session8/AppNavigation';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -54,7 +60,13 @@ export default function App() {
       {/* <ScrollViewExamples /> */}
       {/* <ScrollViewWithManyDataExample /> */}
       {/* <SessionListExample /> */}
-      <SectionListAdvancedExamples />
+      {/* <SectionListAdvancedExamples /> */}
+      {/* <BasicFlexBox /> */}
+      {/* <ImageExample /> */}
+      {/* <SvgExample /> */}
+      {/* <SignInScreen /> */}
+      <HomeScreen />
+      {/* <AppNavigator /> */}
 
       <StatusBar style="auto" />
     </View>
@@ -64,8 +76,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });
