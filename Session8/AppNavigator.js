@@ -40,7 +40,7 @@ export default function AppNavigator() {
       {/* <MaterialTopTabNavigator /> */}
 
       {/* DRAWER NAVIGATORS */}
-      <DrawerNavigator />
+      {/* <DrawerNavigator /> */}
       {/* <CustomDrawerNavigator /> */}
 
       {/* Homework */}

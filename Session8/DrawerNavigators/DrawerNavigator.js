@@ -22,7 +22,7 @@ export default function DrawerNavigator() {
     >
       <Drawer.Screen
         name="Home"
-        component={MaterialBottomTabNavigator}
+        component={BottomTabNavigator}
         options={{
           headerShown: true,
           title: 'EatMe',

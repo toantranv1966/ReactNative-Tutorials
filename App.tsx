@@ -27,6 +27,10 @@ import SignInScreen from './Homeworks/Session06/SignInScreen';
 import HomeScreen from './Homeworks/Session06/HomeScreen';
 import AppNavigator from './Session8/AppNavigator';
 import NavigationHomework from './Session8/Navigation/index';
+import UserMemoHook from './Sessions7/UserMemoHook';
+import CustomHook from './Sessions7/CustomHook';
+import UseMemoHook from './Sessions7/UserMemoHook';
+import UseCallbackHook from './Sessions7/UserCallBack';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -67,9 +71,16 @@ export default function App() {
       {/* <SvgExample /> */}
       {/* <SignInScreen /> */}
       {/* <HomeScreen /> */}
-      <AppNavigator />
-      {/* <NavigationHomework /> */}
 
+      {/* NAVIGATION */}
+      {/* <AppNavigator /> */}
+      <NavigationHomework />
+
+      {/* HOOK */}
+      {/* <UserMemoHook /> */}
+      {/* <CustomHook /> */}
+      {/* <UseMemoHook /> */}
+      {/* <UseCallbackHook /> */}
       <StatusBar style="auto" />
     </View>
   );
