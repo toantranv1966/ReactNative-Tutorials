@@ -25,7 +25,8 @@ import ImageExample from './Sessions04/ImageExample';
 import SvgExample from './Sessions04/SvgExample';
 import SignInScreen from './Homeworks/Session06/SignInScreen';
 import HomeScreen from './Homeworks/Session06/HomeScreen';
-import AppNavigator from './Session8/AppNavigation';
+import AppNavigator from './Session8/AppNavigator';
+import NavigationHomework from './Session8/Navigation/index';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -65,8 +66,9 @@ export default function App() {
       {/* <ImageExample /> */}
       {/* <SvgExample /> */}
       {/* <SignInScreen /> */}
-      <HomeScreen />
-      {/* <AppNavigator /> */}
+      {/* <HomeScreen /> */}
+      <AppNavigator />
+      {/* <NavigationHomework /> */}
 
       <StatusBar style="auto" />
     </View>
