@@ -31,6 +31,7 @@ import UserMemoHook from './Sessions7/UserMemoHook';
 import CustomHook from './Sessions7/CustomHook';
 import UseMemoHook from './Sessions7/UserMemoHook';
 import UseCallbackHook from './Sessions7/UserCallBack';
+import ReactNativePaperApp from './Session09/ReactNativePaperApp';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -74,13 +75,16 @@ export default function App() {
 
       {/* NAVIGATION */}
       {/* <AppNavigator /> */}
-      <NavigationHomework />
+      {/* <NavigationHomework /> */}
 
       {/* HOOK */}
       {/* <UserMemoHook /> */}
       {/* <CustomHook /> */}
       {/* <UseMemoHook /> */}
       {/* <UseCallbackHook /> */}
+
+      {/* Session9 */}
+      <ReactNativePaperApp />
       <StatusBar style="auto" />
     </View>
   );
