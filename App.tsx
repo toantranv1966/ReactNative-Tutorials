@@ -32,6 +32,8 @@ import CustomHook from './Sessions7/CustomHook';
 import UseMemoHook from './Sessions7/UserMemoHook';
 import UseCallbackHook from './Sessions7/UserCallBack';
 import ReactNativePaperApp from './Session09/ReactNativePaperApp';
+import FormikExample from './Session10/FormikExample';
+import KeyboardAvoidingComponent from './Session10/KeyboardAvoidingView';
 export default function App() {
   const [visiable, setVisible] = React.useState(true);
   return (
@@ -84,7 +86,11 @@ export default function App() {
       {/* <UseCallbackHook /> */}
 
       {/* Session9 */}
-      <ReactNativePaperApp />
+      {/* <ReactNativePaperApp /> */}
+
+      {/* Session 10 */}
+      <FormikExample />
+      {/* <KeyboardAvoidingComponent /> */}
       <StatusBar style="auto" />
     </View>
   );
@@ -93,7 +99,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
