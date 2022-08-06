@@ -30,7 +30,7 @@ export default function AppNavigator() {
       {/* <HelloTab /> */}
 
       {/* STACK */}
-      {/* <StackNavigator /> */}
+      <StackNavigator />
 
       {/* TAB NAVIGATORS */}
       {/* <BottomTabNavigator /> */}
