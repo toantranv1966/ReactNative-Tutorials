@@ -8,12 +8,16 @@ import SearchScreen from './screens/SearchScreen';
 import FavouriteScreen from './screens/FavouriteScreen';
 import CartScreen from './screens/CartScreen';
 import NotificationScreen from './screens/NotificationScreen';
+import { useSelector } from 'react-redux';
 
 const ICON_SIZE = 24;
 
 const Tab = createMaterialBottomTabNavigator();
 
 export default function MaterialBottomTabNavigator() {
+  const addedProducts = useSelector(
+    (state) => state.shoppingReducer.addedProducts
+  );
   return (
     <Tab.Navigator
       shifting={true}
@@ -65,6 +69,7 @@ export default function MaterialBottomTabNavigator() {
               color={color}
             />
           ),
+          tabBarBadge: addedProducts?.length,
           tabBarColor: '#ff6348',
         }}
       />

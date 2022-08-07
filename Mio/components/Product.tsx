@@ -14,10 +14,9 @@ import { Feather } from '@expo/vector-icons';
 
 // VIETNAMESE CONFIG
 import 'numeral/locales/vi';
-import { Item } from 'react-native-paper/lib/typescript/components/List/List';
-import { RotateInDownLeft } from 'react-native-reanimated';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../modules/Shopping/actions';
 import { useNavigation } from '@react-navigation/native';
-numeral.locale('vi');
 
 const WIDTH_SCREEN = Dimensions.get('window').width;
 
@@ -29,6 +28,7 @@ type Props = {
 
 const Product = (props: Props) => {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   return (
     <Pressable
       style={[styles.container, props.style]}
@@ -62,7 +62,8 @@ const Product = (props: Props) => {
             <Pressable
               style={styles.button}
               onPress={() => {
-                Alert.alert('Online Store', 'Coming Soon');
+                // Alert.alert('Online Store', 'Coming Soon');
+                dispatch(addToCart(props.data, 1));
               }}
             >
               <Feather name="shopping-cart" size={24} color="white" />

@@ -37,6 +37,7 @@ import ReactNativePaperApp from './Session09/ReactNativePaperApp';
 import FormikExample from './Session10/FormikExample';
 // import KeyboardAvoidingComponent from './Session10/KeyboardAvoidingView';
 import FirebaseExample from './Session11/FirebaseApp.js';
+import MioApp from './Mio';
 import ComponentToComponent from './Session13';
 import ReduxExamples from './Session13/ReduxExamples';
 
@@ -122,7 +123,8 @@ export default function App() {
           {/* <ReduxExamples /> */}
 
           {/* MIO */}
-          <MioAppNavigator />
+          {/* <MioAppNavigator /> */}
+          <MioApp />
 
           <StatusBar style="auto" />
         </View>
