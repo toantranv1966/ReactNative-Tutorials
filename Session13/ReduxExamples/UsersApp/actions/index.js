@@ -45,6 +45,7 @@ export const getUsersAsync = () => {
       })
       .catch((error) => {
         dispatch(getUsers_Error(error));
+        console.log(error);
       });
   };
 };
