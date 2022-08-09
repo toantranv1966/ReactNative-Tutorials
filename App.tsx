@@ -40,6 +40,7 @@ import FirebaseExample from './Session11/FirebaseApp.js';
 import MioApp from './Mio';
 import ComponentToComponent from './Session13';
 import ReduxExamples from './Session13/ReduxExamples';
+import Users from './Session13/ReduxExamples/UsersApp/components/Users';
 
 export default function App() {
   const [visible, setVisible] = React.useState(true);
@@ -87,7 +88,7 @@ export default function App() {
         }}
       ></Button> */}
           {/* <NetworkingExample /> */}
-          {/* <NetworkingWithAxios /> */}
+          <NetworkingWithAxios />
           {/* Session5 */}
           {/* <FlatListExample /> */}
           {/* <ScrollViewExamples /> */}
@@ -121,10 +122,11 @@ export default function App() {
           {/* REDUX */}
           {/* <ComponentToComponent /> */}
           {/* <ReduxExamples /> */}
+          {/* <Users /> */}
 
           {/* MIO */}
           {/* <MioAppNavigator /> */}
-          <MioApp />
+          {/* <MioApp /> */}
 
           <StatusBar style="auto" />
         </View>
